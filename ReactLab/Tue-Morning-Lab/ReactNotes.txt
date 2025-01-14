@@ -1,0 +1,62 @@
+UI Designer - Photoshop, Illustrator, Figma
+UI Developer - HTML, CSS, Bootstrap, JavaScript
+Front-End Developer - JavaScript, TypeScript, React, Angular
+
+React
+- it's a JavaScript based front-end development library
+- it was introduced in 2013 by Facebook
+- it provides various extensions for web application architectural support
+such as flux, react native and much more
+- helpful in web application development and mobile application development
+- it's a declarative apporach, component based library that allows developer
+to build reusable UI components and follows Virtual DOM apporach
+
+How React Works ?
+- it operates by creating an in-memory virtual DOM rather than directly manipulating browser's DOM
+- Virtual DOM is an in-memory representation of DOM
+- Virtual DOM is a lightweight copy of actual DOM
+- It is exactly same as DOM but it does not have power to directly change layout of the document
+
+
+Disadvantages of DOM
+- whenever DOM gets updated, the updated element and its child have to rendered again to update UI of page
+- manipulating DOM is a slow process
+
+
+How virtual DOM helps React to perform better ?
+- everything in react is treated as a component
+- each component has a state
+- whenever state of any component is changed react immediately updates the virtual DOM tree
+- react maintains two virtual DOM at each time
+- one contains the updated virtual DOM and one which is the previous version
+- Now it compares the previous one with the updated one and figure out the exact changes
+- this whole process of comparing is known as diffing
+- the entire process of transforming changes to real DOM is knonw as reconciliation
+
+
+Features of React
+1. JSX
+- JavaScript Syntax Extension
+- it combines HTML and JavaScript that allows us to embed JS objects with HTML
+
+Vanilla JS
+const username = "Ravi";
+document.createElement("div").innerText = "Welcome " + username;
+
+JSX
+const username = "Ravi";
+const element = <div>Welcome {username}</div>
+
+
+2. One-way Data Binding
+- React follows one-way data binding where data flows from parent to child component
+- Child component cannot directly return data to its parent component
+
+
+
+Getting started with react
+1. Install NodeJS
+2. CRA - Create React App 
+3. npx create-react-app app-name
+
+npm i web-vitals --save-dev

@@ -1,0 +1,29 @@
+UI Developer - HTML5, CSS3, Bootstrap, JavaScript, JQuery
+UX Designer  - Photoshop, Illustrator, Figma
+UI Designer  - HTML, CSS, Figma, Illustrator
+UI-UX Developer or Designer - JavaScript, Figma
+Front-End Developer - JavaScript, React, Angular, TypeScript
+
+React
+
+What is React ?
+- JavaScript based front-end development library
+- mainly used for web application and mobile application development
+- it was introduced in 2013 by Facebook
+- it follows declarative approach, component based library that allows developer to build
+reusable UI components
+- it follows Virtual DOM approach to optimize performance by minimizing DOM updates
+
+How React works ?
+Why we need React ?
+Features of React
+
+
+Getting started with React
+1. Install NodeJS
+2. npx create-react-app app-name
+3. cd app-name
+4. npm start
+
+npm i web-vitals --save-dev
+
