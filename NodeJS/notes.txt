@@ -1,0 +1,43 @@
+NodeJS
+- JavaScript Runtime environment 
+- runs on chrome V8 Engine
+- allows you to run JavaScript code outside the browser making it useful for server side development
+- Event-driven, non-blocking I/O architecture
+
+V8 Engine
+- JavaScript Engine inside chrome
+- written on C++
+- used in chrome
+- compiles and executes JavaScript source code
+
+Compilation of JS
+- it is considered as an interpreted language
+- but modern JavaScript engine no longer just interpret but they compile it
+
+JavaScript is internally compiled by V8 with JIT (JUST-IN-TIME) compilation to speed up the execution
+
+JIT Compiler
+- it's a program that compiles code while a program is running
+
+Compilation during execution - compile code while a progra is running
+Byte code to machine code - translare bytecode into machine code
+Dynamic compilation - it allows program to be compiled at runtime
+
+
+Pre-requisite for NodeJS
+- Basic JS
+- Data Types
+- Classes and Objects (OOJS)
+- Functional Programming
+- this keyword
+- Scopes
+- Async Programming
+- Callbacks
+- Promises
+- Async and Await
+- Event Loop
+
+
+AJAX - Asynchronous JavaScript and XML
+Promises
+Async and Await

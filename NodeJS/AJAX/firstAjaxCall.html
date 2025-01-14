@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="images">
+
+    </div>
+
+
+    <script>
+        let div = document.querySelector("#images");
+        const API_KEY = "1gPMgQWU9fDU9PPHW2Kr917sPJlo3n2g";
+        const limit = 10;
+        let url = `http://api.giphy.com/v1/gifs/search?q=tom+and+jerry&api_key=${API_KEY}&limit=${limit}`;
+        fetch(url, {method: 'GET'})
+        .then(result => result.json())
+        .then(obj => {
+            // console.log(obj);
+            obj.data.forEach(function(item) {
+                let imgUrl = item.images.original.url;
+                let img = document.createElement("img");
+                img.setAttribute("src", imgUrl);
+                div.appendChild(img);
+            })
+
+        })
+        .catch(errMsg => console.log(errMsg));
+
+    </script>
+    
+</body>
+</html>
