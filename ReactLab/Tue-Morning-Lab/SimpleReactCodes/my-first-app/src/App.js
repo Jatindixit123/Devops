@@ -12,7 +12,7 @@ function Header() {
   )
 }
 
-function User(props) {
+function User({props}) {
   return (
     <li>
       <img src={props.profilePic} alt="User Image"/>
@@ -69,10 +69,15 @@ function App() {
           userAge = {USER_DATA[2].userAge}
           /> */}
 
-          <User {...USER_DATA[0]}/>
+          {/* <User {...USER_DATA[0]}/>
           <User {...USER_DATA[1]}/>
           <User {...USER_DATA[2]}/>
-          <User {...USER_DATA[3]}/>
+          <User {...USER_DATA[3]}/> */}
+
+          {USER_DATA.map((user) => (
+            <User key={user.id} props={user}/>
+          ))}
+          
         </ul>
       </main>
     </div>
