@@ -1,0 +1,81 @@
+Full Stack
+Front-End
+- UI Developer - HTML5, CSS3, JavaScript, Bootstrap, JQuery, Figma, Photoshop
+- UX Designer - Figma, Illustrator, Photoshop
+- UI-UX - UI Developer + Designing
+- Front-End Developer - JavaScript, React, Angular, Tailwind
+
+Back-End
+
+Introduction to React
+- it’s a library that employs web pack to automatically compile 
+React, JSX, ES6
+- JavaScript based Front-end development library
+- It’s a declarative, component based library that allows developers to 
+build reusable components and it follows the Virtual DOM approach
+
+
+How React Works ?
+- it operates by creating an in-memory virtual DOM rather than 
+directly manipulating the browser’s DOM
+
+How DOM Works ?
+Example:
+document.getElementById(“username”).innerValue = ‘updated value’;
+
+1. Browser parses the HTML to find the node with this id
+2. It removes the child element of specific element
+3. Update the element with updated value
+4. Recalculate CSS for parent and child nodes
+5. Update the layout
+6. Finally traverse the tree and paint it on the screen (browser)
+
+
+How virtual DOM helps React ?
+- In react, everything is treated as a component 
+- A component can contain a state
+- Whenever state of any component is changed react updates it’s virtual DOM
+
+React maintains two Virtual DOM at each time, one contains the 
+updated Virtual DOM and one which is just the pre-update version 
+of this updated Virtual DOM.
+Now it compares the pre-updated version with updated Virtual DOM
+This process of comparing virtual DOM with previous one is known as diffing
+
+React uses a concept of batch update to update the real DOM
+It means that the changes to the real DOM are sent in batches instead of 
+Sending any update for a single change in the state of a component. 
+The process of sending changes to real DOM is known as reconciliation.
+
+============================
+
+Features of React
+1. JSX - JavaScript Syntax Extension  /  JavaScript XML
+  - JSX combines HTML and JavaScript - allows you to embed JavaScript objects with HTML elements
+
+const username = "Ravi";
+
+// Vanilla JS
+let div = document.createElement("div");
+div.innerText = "Welcome : " + username;
+div.className = "container";
+
+// React JSX
+let div = <div className="container">Welcome {username}</div>
+
+
+
+
+Getting started with React
+1. Install NodeJS
+2. npm create vite@latest my-first-app
+3. cd my-first-app
+4. npm install
+5. npm run dev
+
+
+For permissions issue in windows
+Open powershell as admin
+Type -> Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+
+
