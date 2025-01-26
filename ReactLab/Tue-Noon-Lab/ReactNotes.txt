@@ -27,3 +27,13 @@ Getting started with React
 
 npm i web-vitals --save-dev
 
+Creating react project using Vite
+1. npm create vite@latest my-second-app 
+2. cd my-second-app
+3. npm install
+4. npm run dev
+5. Clean up - App.jsx, App.css, index.css
+
+For permissions issue in windows
+Open powershell as admin
+Type -> Set-ExecutionPolicy -ExecutionPolicy Unrestricted
