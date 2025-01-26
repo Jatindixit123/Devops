@@ -57,3 +57,16 @@ Getting started with React
 For permissions issue in windows
 Open powershell as admin
 Type -> Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+
+
+Alternate way to build react application
+- Using vite - to create a lightweight react application
+
+Commands
+- npm create vite@latest my-second-app
+- framework - react
+- variant - JavaScript
+- cd my-second-app
+- npm install
+- npm run dev
+
