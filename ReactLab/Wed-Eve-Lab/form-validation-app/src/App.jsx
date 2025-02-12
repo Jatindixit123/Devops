@@ -69,13 +69,20 @@ function App() {
       newMsg.username = "Invalid Username, Should contain more than 3 letters";
     }
 
-    if(!userdata.usermail) {
-      newMsg.usermail = "Please enter your email address";
+    // Validate Email Using RegEx pattern
+    const emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!userData.usermail || !emailRegEx.test(userData.usermail)) {
+      newMsg.usermail = "Please enter a valid email address";
     }
 
+    // validate password based on length
     if(!userdata.password) {
       newMsg.password = "Please enter your password";
     }
+
+    // confirm password
+
+    // Validate DOB - Age > 18
 
     setErrMsg(newMsg);
   }
