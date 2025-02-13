@@ -1,0 +1,29 @@
+.team-wrapper {
+    width: 25%;
+}
+
+.team-list > ul > li {
+    background-color: #eee;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.team-list > ul > li > p{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.team-list .emp-list {
+    margin-left: 10px;
+}
+
+.team-list .emp-list li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 10px;
+}
+.team-list .emp-list li p{
+    margin-bottom: 5px;
+}
