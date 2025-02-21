@@ -1,0 +1,44 @@
+<%- include('includes/header.ejs') %>
+
+    <main>
+        <h2>Search Student</h2>
+        <input type="text" placeholder="Type student name" id="search"/>
+        <ul id="results">
+    
+        </ul>
+    </main>
+
+   
+    <%- include('includes/footer.ejs') %>
+    
+    <script>
+        const searchInput = document.querySelector("#search");
+        const resultList = document.querySelector("#results");
+
+        searchInput.addEventListener("input", async () => {
+            const query = searchInput.value.trim();
+            if(query.length === 0) {
+                resultList.innerHTML = "";
+                return;
+            }
+            try {
+                const response = await fetch(`/search?text=${encodeURIComponent(query)}`);
+                const data = await response.json();
+                console.log("data :",data);
+                showData(data);
+            } catch(error) {
+                console.error("Unable to fetch data...",error);
+            }
+        })
+
+        function showData(data) {
+            resultList.innerHTML = "";
+            data.forEach(obj => {
+                const li = document.createElement("li");
+                li.textContent = `${obj.s_name} - ${obj.s_course}`;
+                resultList.appendChild(li);
+            });
+        }
+
+    </script>
+    
