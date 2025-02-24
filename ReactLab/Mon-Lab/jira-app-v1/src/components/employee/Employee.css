@@ -8,18 +8,19 @@
 .add-emp {
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #aaa;
+    /* border-bottom: 1px solid #aaa; */
 }
 .add-emp label {
     display: block;
 }
-.add-emp input {
-    width: 100%;
+.add-emp input,
+.add-emp select {
+    width: 80%;
     height: 40px;
     margin: 10px 0px;
 }
 .add-emp button {
-    width: 100%;
+    width: 80%;
     height: 40px;
     background-color: #0077B5;
     color: #fff;
