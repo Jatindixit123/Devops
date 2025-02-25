@@ -11,3 +11,7 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
+
+.btn-group {
+    margin-top: 50px;
+}

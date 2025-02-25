@@ -66,7 +66,9 @@ export const Employee = ({team_list, addEmp}) => {
                     />
                 </div>
 
-                <button onClick={addNewEmp}>Add Employee</button>
+                <div className="btn-group">
+                    <button onClick={addNewEmp}>Add Employee</button>
+                </div>
             </div>
         </div>
     )

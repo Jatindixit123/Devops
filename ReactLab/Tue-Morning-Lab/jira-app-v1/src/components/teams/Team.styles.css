@@ -1,82 +1,24 @@
 .team-list {
     width: 20%;
+    background-color: #eee;
+    padding: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
+.team-list h4 {
+    margin: 0px;
+}
+
 .team-list ul {
     margin: 0px;
     padding: 0px;
     list-style: none;
 }
 .team-list ul li {
-    background-color: #aaa;
     padding: 10px;
     font-size: 20px;
     margin-bottom: 2px;
 }
 
-/* Title Styling */
-.title {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Accordion Styling */
-.accordion {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
-
-/* Accordion Header */
-.accordion-header {
-    width: 100%;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 12px 16px;
-    font-size: 18px;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
-
-.accordion-header:hover {
-    background-color: #2980b9;
-}
-
-/* Active Accordion */
-.accordion-header.active {
-    background-color: #2980b9;
-}
-
-/* Accordion Body */
-.accordion-body {
-    background-color: #f9f9f9;
-    padding: 12px 16px;
-    border-top: 1px solid #ccc;
-}
-
-/* Employee List */
-.employee {
-    padding: 8px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.employee:last-child {
-    border-bottom: none;
-}
-
-/* Skills Text */
-.skills {
-    font-size: 14px;
-    color: #555;
-}
-
-/* Arrow Styling */
-.arrow {
-    font-size: 16px;
+.team-list ul li p {
+    margin: 0px;
 }

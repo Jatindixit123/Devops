@@ -3,6 +3,7 @@ import "./App.css";
 import { Employee } from "./components/employees/Employee";
 import { Header } from "./components/header/Header";
 import { Team } from "./components/teams/Team";
+import { TaskAssign } from "./components/taskAssign/TaskAssign";
 
 function App() {
   const [teamList, setTeamList] = useState([
@@ -57,6 +58,7 @@ function App() {
           <div className="row">
             <Team teamList={teamList}/>
             <Employee team_list={teamList} addEmp={addEmployee}/>
+            <TaskAssign team_list={teamList} />
           </div>
         </div>
       </main>
