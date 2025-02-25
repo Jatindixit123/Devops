@@ -1,8 +1,9 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const adminRoutes = require("./routes/admin");
-const studentRoutes = require("./routes/students");
+const adminRoutes = require("./routes/adminRoutes");
+const studentRoutes = require("./routes/studentRoutes").default;
+const bodyParser = require("body-parser");
 
 // for using template engine EJS
 app.set('view engine', 'ejs');
@@ -18,6 +19,7 @@ const students = [
     {s_id: 106, s_name: "John", s_sem: 4, s_course: "B.tech"}
 ]
 
+app.use(bodyParser.urlencoded({extended:false}));
 
 app.get('/search', (req, res) => {
     const query = req.query.text.toLowerCase();
@@ -31,6 +33,8 @@ app.get('/search', (req, res) => {
 // - instance of express
 // - also known as global middle ware
 // - mainly used for engine, server, port...
+
+
 
 app.use("/admin/", adminRoutes);
 app.use("/student/", studentRoutes);
