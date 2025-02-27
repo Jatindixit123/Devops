@@ -3,6 +3,7 @@ import "./App.css";
 import { useState } from "react";
 import { TeamManagement } from "./components/teamManagement/TeamManagement";
 import { EmployeeManagement } from "./components/empManagement/EmployeeManagement";
+import { AssignTask } from "./components/taskManagement/AssignTask";
 
 function App() {
 
@@ -66,6 +67,10 @@ function App() {
                     <EmployeeManagement
                         teamList={teamData}
                         addEmp={addEmp}
+                    />
+
+                    <AssignTask
+                        teamList={teamData}
                     />
                 </div>
             </div>
