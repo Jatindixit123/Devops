@@ -45,12 +45,12 @@ function App() {
             teamData={teamsData}
           />
           <EmployeeList
-          teamList={teamsData}
+            teamList={teamsData}
             empList={employees}
             addEmp={addEmployee}
           />
           <AssignTask
-            empList={employees}
+            teamList={teamsData}
           />
         </div>
       </div>

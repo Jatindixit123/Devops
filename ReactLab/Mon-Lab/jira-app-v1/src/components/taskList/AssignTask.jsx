@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./AssignTask.css";
 
-const AssignTask = ({empList, taskList}) => {
+const AssignTask = ({teamList}) => {
     const handleAssignTask = () => {
         const [taskTitle, setTaskTitle] = useState("");
     }
@@ -25,10 +25,17 @@ const AssignTask = ({empList, taskList}) => {
                     <select>
                         <option value="">Select Employee</option>
                         {
-                            empList.map((emp, index) => (
-                                <option key={index} value={emp.empName}>
-                                    {emp.empName}
-                                </option>
+                            teamList.map((team, index) => (
+                                <optgroup key={index} label={team.team_name}>
+                                    {
+                                        team.emp_data.map((emp, index) => (
+                                            <option key={index} value={emp.emp_name}>
+                                                {emp.emp_name}
+                                            </option>
+                                        ))
+                                    }
+                                </optgroup>
+                                
                             ))
                         }
                     </select>
