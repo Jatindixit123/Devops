@@ -1,0 +1,37 @@
+.emp-wrapper {
+    width: 35%;
+    background-color: #eee;
+    padding: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.emp-wrapper .input-group {
+    margin-bottom: 20px;
+    width: 90%;
+    margin: 0 auto 20px;
+}
+.emp-wrapper .input-group label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+.emp-wrapper .input-group input,
+.emp-wrapper .input-group select {
+    width: 100%;
+    margin-bottom: 3px;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.emp-wrapper button {
+    width: 100%;
+    height: 50px;
+    display: block;
+    margin: 10px auto 0px;
+    background-color: #0077B5;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+}

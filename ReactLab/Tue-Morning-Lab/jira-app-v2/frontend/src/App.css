@@ -1,0 +1,17 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-group {
+    margin-top: 50px;
+}
