@@ -3,12 +3,16 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+
+const empRoutes = require("./routes/empRoutes");
+
 const {MONGO_USERNAME, MONGO_PASSWORD, MONGO_DB_NAME} = require("./config/config");
 const app = express();
 
 const PORT = 9999;
 
 app.use(cors());
+app.use(express.json());
 
 const MONGO_URI = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@cluster0.zxvoo.mongodb.net/${MONGO_DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`;
 
@@ -32,5 +36,9 @@ app.get("/teams", async (request, response) => {
         console.log("Error while fetching teams data...");
     }
 });
+
+
+app.use("/api/emp", empRoutes);
+
 
 app.listen(PORT, () => console.log("Server started at PORT :",PORT));
