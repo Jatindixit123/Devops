@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./EmployeeManagement.styles.css";
+import axios from "axios";
 
 export const EmployeeManagement = ({teamList, addEmp}) => {
 
@@ -8,8 +9,10 @@ export const EmployeeManagement = ({teamList, addEmp}) => {
     const [empSkills, setEmpSkills] = useState("");
     const [teamName, setTeamName] = useState("");
 
-    const handleSubmit = () => {
-        addEmp(empId, empName, empSkills, teamName)
+    const handleSubmit = async() => {
+        // addEmp(empId, empName, empSkills, teamName)
+        const URL = "http://localhost:9999/api/emp/createEmp";
+        await axios.post(URL, {empId, empName, empSkills, teamName});
         setEmpId("");
     }
 
