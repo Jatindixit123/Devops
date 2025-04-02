@@ -2,11 +2,13 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const empRoutes = require("./routes/empRoutes");
 
 const app = express();
 const PORT = 3333;
 
 app.use(cors());
+app.use(express.json());
 
 const USERNAME = 'admin';
 const PASSWORD = 'admin';
@@ -27,10 +29,12 @@ app.get("/teams", async(req, res) => {
     try {
         const docs = await Teams.find();
         res.json(docs);
-        console.log("Data from MongoDB :",docs);
+        // console.log("Data from MongoDB :",docs);
     } catch (error) {
         res.status(500).json({message : error.message});
     }
 });
+
+app.use("/api/emp", empRoutes);
 
 app.listen(PORT, () => console.log("Server started at :",PORT));
