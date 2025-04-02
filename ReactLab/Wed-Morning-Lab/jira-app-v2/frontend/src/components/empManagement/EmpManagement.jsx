@@ -1,14 +1,27 @@
 import { useState } from "react";
 import "./EmpManagement.styles.css";
+import axios from "axios";
 
 export const Employee = ({teamList, addEmp}) => {
     const [empId, setEmpId] = useState("");
     const [empName, setEmpName] = useState("");
     const [empSkills, setEmpSkills] = useState("");
     const [teamName, setTeamName] = useState("");
+    const EMP_URL = "http://localhost:3333/api/emp";
 
-    const addEmpHandler = () => {
-        addEmp(empId, empName, teamName, empSkills);
+    const addEmpHandler = async () => {
+        // addEmp(empId, empName, teamName, empSkills);
+        const response = await axios.post(EMP_URL + "/createEmp", {empId, empName, empSkills, teamName});
+        console.log("Response from server :",response);
+        setEmpId("");
+        setEmpName("");
+        setEmpSkills("");
+        setTeamName("")
+    }
+
+    const deleteEmpHandler = async () => {
+        // addEmp(empId, empName, teamName, empSkills);
+        const response = await axios.post(EMP_URL + "/deleteEmp", {empId});
     }
 
     return (
@@ -21,6 +34,7 @@ export const Employee = ({teamList, addEmp}) => {
                         type="text"
                         placeholder="Enter Emp ID"
                         onChange={(e) => setEmpId(e.target.value)}
+                        value={empId}
                     />
                 </div>
 
@@ -30,6 +44,7 @@ export const Employee = ({teamList, addEmp}) => {
                         type="text"
                         placeholder="Enter Emp Name"
                         onChange={(e) => setEmpName(e.target.value)}
+                        value={empName}
                     />
                 </div>
 
@@ -39,6 +54,7 @@ export const Employee = ({teamList, addEmp}) => {
                         type="text"
                         placeholder="Enter Emp Skills (comma separated)"
                         onChange={(e) => setEmpSkills(e.target.value)}
+                        value={empSkills}
                     />
                 </div>
 
