@@ -1,0 +1,28 @@
+.emp-wrapper {
+    width: 35%;
+}
+
+.emp-wrapper .input-group {
+    margin-bottom: 15px;
+}
+
+.emp-wrapper .input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.emp-wrapper .input-group .input-box {
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.emp-wrapper button {
+    width: 50%;
+    height: 50px;
+    background-color: #0077B5;
+    color: #fff;
+    border: 1px solid #0077B5;
+}
