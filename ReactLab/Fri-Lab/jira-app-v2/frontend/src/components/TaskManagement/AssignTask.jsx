@@ -3,8 +3,13 @@ import "./AssignTask.styles.css";
 
 export const AssignTask = ({teamData}) => {
 
+    const [taskTitle, setTaskTitle] = useState("");
+    const [taskDesc, setTaskDesc] = useState("");
+    const [teamName, setTeamName] = useState("");
+    const [empName, setEmpName] = useState("");
+
     const handleClick = () =>{
-        addEmp(empId, empName, empSkills, teamName);
+        // addEmp(empId, empName, empSkills, teamName);
     }
 
     return (

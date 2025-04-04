@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./EmployeeManagement.styles.css";
+import axios from "axios";
 
 export const EmployeeManagement = ({teamData, addEmp}) => {
     const [empId, setEmpId] = useState("");
@@ -7,8 +8,20 @@ export const EmployeeManagement = ({teamData, addEmp}) => {
     const [empSkills, setEmpSkills] = useState("");
     const [teamName, setTeamName] = useState("");
 
-    const handleClick = () =>{
-        addEmp(empId, empName, empSkills, teamName);
+    const EMP_POST_URL = "http://localhost:8989/api/emp/create"
+
+    const handleClick = async (e) =>{
+        // addEmp(empId, empName, empSkills, teamName);
+        e.preventDefault();
+        try {
+            await axios.post(EMP_POST_URL, {empId, empName, empSkills, teamName});
+            setEmpId("");
+            setEmpName("");
+            setEmpSkills("");
+            setTeamName("");
+        } catch (error) {
+            console.error("Error while creating new emp",error)
+        }
     }
 
     return (
@@ -19,6 +32,7 @@ export const EmployeeManagement = ({teamData, addEmp}) => {
                     <label>Enter Emp ID</label>
                     <input type="text" placeholder="Enter Emp ID"
                         onChange={(e) => setEmpId(e.target.value)}
+                        value={empId}
                     />
                 </div>
 
@@ -26,6 +40,7 @@ export const EmployeeManagement = ({teamData, addEmp}) => {
                     <label>Enter Emp Name</label>
                     <input type="text" placeholder="Enter Emp Name"
                         onChange={(e) => setEmpName(e.target.value)}
+                        value={empName}
                     />
                 </div>
 
@@ -33,6 +48,7 @@ export const EmployeeManagement = ({teamData, addEmp}) => {
                     <label>Enter Emp Skills</label>
                     <input type="text" placeholder="Enter Emp Skills"
                         onChange={(e) => setEmpSkills(e.target.value)}
+                        value={empSkills}
                     />
                 </div>
 
