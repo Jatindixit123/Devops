@@ -1,0 +1,24 @@
+.team-list {
+    width: 20%;
+    background-color: #eee;
+    padding: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.team-list h4 {
+    margin: 0px;
+}
+
+.team-list ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.team-list ul li {
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.team-list ul li p {
+    margin: 0px;
+}

@@ -1,0 +1,38 @@
+.task-wrapper {
+    width: 35%;
+    background-color: #eee;
+    padding: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.task-wrapper .input-group {
+    /* margin-bottom: 20px; */
+    width: 90%;
+    margin: 0 auto 20px;
+}
+.task-wrapper .input-group label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+.task-wrapper .input-group input,
+.task-wrapper .input-group select,
+.task-wrapper .input-group textarea {
+    width: 90%;
+    margin-bottom: 3px;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.task-wrapper button {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    background-color: #0077B5;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+}
