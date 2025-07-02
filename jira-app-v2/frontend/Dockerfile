@@ -9,10 +9,12 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
-RUN npm ci
 
 # Copy the rest of the application code
 COPY . .
+
+# Clean install after copying the rest of the application code
+RUN npm ci
 
 # Expose the port the app runs on
 EXPOSE 5173 
